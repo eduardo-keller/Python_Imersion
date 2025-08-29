@@ -1,10 +1,10 @@
 
 def format_cents(cents: int) -> str:
-    if cents < 0:
-        sign: str = "[-]"
-        cents = cents * -1
-    else:
-        sign: str = "[+]"
-    cents = cents / 100
+    sign: str = "[+]" if cents >= 0 else "[-]"
+    reais = abs(cents) / 100
+    print(f"{sign} {reais}")
     
 
+
+if __name__=="__main__":
+    format_cents(100_01)
